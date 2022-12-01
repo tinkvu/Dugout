@@ -1,0 +1,19 @@
+{% extends 'View Gllery.html' %}
+{% block body %}
+<body>
+<form action="AddGlleryImg" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="363" border="0" class="table">
+    <tr>
+      <td width="43">Gallery</td>
+      <td width="144"><input type="file" name="file" class="form-control" required/></td>
+
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center">
+        <input type="submit" name="Submit2" value="Add" class="btn btn-success"/>
+      </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

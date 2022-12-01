@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dugout" >
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dugout"
+        android:usesCleartextTraffic="true" >
+        <activity android:name=".customimage2" >
+        </activity>
+        <activity android:name=".Custom5" />
+        <activity android:name=".ViewFacilities" />
+        <activity android:name=".AddBookingSlot" />
+        <activity android:name=".ViewBookings" />
+        <activity android:name=".Custom3" />
+        <activity android:name=".custom_image" />
+        <activity android:name=".ip" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddComplaint" />
+        <activity android:name=".Complaints" />
+        <activity android:name=".AddRating" />
+        <activity android:name=".ViewMoreDetails" />
+        <activity android:name=".AddBookings" />
+        <activity android:name=".ViewGallery" />
+        <activity android:name=".ViewFeatures" />
+
+        <service android:name=".LocationService" />
+
+        <activity android:name=".ViewTurfInfo" />
+        <activity android:name=".ViewTurf" />
+        <activity android:name=".UserRegistration" />
+        <activity android:name=".Home" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,43 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">-->
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function(){-->
+<!--window.location.hash="#dd";-->
+<!--});-->
+<!--</script>-->
+
+<body>
+<!--<center>-->
+<div id="dd" class="dd">
+<form id="form1" name="form1" method="post" action="">
+   <table width="200" border="1" class="table"   id="customers">
+  <tr>
+    <th>Name</th>
+    <th>Place</th>
+    <th>Post</th>
+    <th>Pincode</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th> Login Id</th>
+  </tr>
+  {% for  i in data %}
+  <tr>
+    <td>{{i[1]}}{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td>&nbsp;{{i[4]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td>&nbsp;
+      <p>{{i[6]}}</p>
+      <p>&nbsp;</p></td>
+    <td>&nbsp;{{i[7]}}</td>
+     <td>&nbsp;{{i[8]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+<!--</center>-->
+</div>
+</body>
+{% endblock %}

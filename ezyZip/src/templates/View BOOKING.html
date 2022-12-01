@@ -1,0 +1,50 @@
+{% extends 'turf_index.html' %}
+{% block body %}
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+<script type="text/javascript">
+$(document).ready(function(){
+window.location.hash="#dd";
+});
+</script>
+
+
+
+
+<body>
+<div id="dd" class="dd">
+<h2> Please call and give confirmation to users <br>after accepting/rejecting! </h2>
+<form id="form1" name="form1" method="post"  action="">
+  <table width="741" border="1"  id="customers">
+    <tr>
+      <th width="328">User Details</th>
+      <th width="288">Date </th>
+      <th width="288">Time Slot </th>
+       <th width="288">Booking Status </th>
+
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[3]}} {{i[4]}}&nbsp;<br> <a href="tel:{{i[6]}}"> Call Now</a></td>
+      <td>&nbsp;{{i[1]}}</td>
+      <td>{{i[2]}}&nbsp;</td>
+      <td>{% if i[5]=='pending' %}
+        <a href="acceptbooking?id={{i[0]}}" class="btn btn-success">Accept</a>
+     <a href="rejectbooking?id={{i[0]}}" class="btn btn-danger">Reject</a>
+        {% else %} {% if i[5] == 'Accepted' %}<p style="color:#0000ff"> {% else %}<p style="color:#ff0000"> {% endif %}{{i[5]}} </p> {% endif %}
+       </td>
+
+    </tr>
+    {% endfor %}
+    
+  </table>
+</form>
+</div>
+</body>
+
+{% endblock %}

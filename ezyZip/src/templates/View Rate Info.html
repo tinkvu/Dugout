@@ -1,0 +1,27 @@
+{% extends 'turf_index.html' %}
+{% block body %}
+
+<body>
+<h1> Add Rate Info!</h1>
+<form action="/AddRateInfo" method="get">
+  <table width="405" border="1" class="table">
+  <tr>
+     <th width="166">Type </th>
+    <th width="166">Day Time Rate </th>
+    <th width="229">Night Time Rate </th>
+  </tr>
+  {% for i in data6 %}
+  <tr>
+    <td> {{i[0]}}</td>
+    <td> {{i[1]}}</td>
+    <td>{{i[2]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+  <p>
+    <input type="submit" name="Submit" value="Edit Rate" class="btn btn-success" />
+  </p>
+  <p>&nbsp;</p>
+</form>
+</body>
+{% endblock %}

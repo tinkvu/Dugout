@@ -1,0 +1,27 @@
+
+{% extends 'turf_index.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+<table width="307" height="135" border="1">
+<tr><th colspan="2"><h1> Rating : </h1></th>
+
+    <td><h1>{{data1[0]}}</h1></td>
+
+
+</tr>
+  
+    <tr>
+      <th scope="col">UserName </th>
+      <th scope="col">Rating</th>
+    </tr>
+        {% for i in data %}
+    <tr>
+      <td scope="row">{{i[1]}} {{i[2]}}</td>
+      <td>&nbsp;{{i[0]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{%endblock%}

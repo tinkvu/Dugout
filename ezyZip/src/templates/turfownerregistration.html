@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% block body %}
+
+
+<body>
+<br><br><br><br><br><br>
+<form action="RegisterTurf" method="post">
+  <div>
+  <table class="table" width="348" border="0" style="width:500px;">
+  <tr>
+    <td width="164">Turf name </td>
+    <td width="168"><input type="text" name="textfield" required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>place</td>
+    <td><input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" class="form-control" /></td>
+  </tr>
+  <tr>
+    <td>post</td>
+    <td><input type="text" name="textfield3" required pattern="[A-Z a-z.]{3,25}" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>Pincode</td>
+    <td><input type="text" name="textfield4" required pattern="[0-9]{6}" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>ph no </td>
+    <td><input type="text" name="textfield5" required pattern="[6789][0-9]{9}" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>latitude</td>
+    <td><input type="text" name="textfield6" required pattern="^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>longitude</td>
+    <td><input type="text" name="textfield7" required pattern="^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}" class="form-control"/></td>
+  </tr>
+    <tr>
+      <td> Turf Type:</td>
+      <td> <input type="checkbox" value="5 s" id="t_type" name="ttype"/> 5's<br> <input type="checkbox" value="7 s" name="ttype"/> 7's<br><input type="checkbox" value="11 s" name="ttype"/> 11's</td>
+    </tr>
+  <tr>
+    <td>E-Mail</td>
+    <td><input type="text" name="textfield8" placeholder="Username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>password</td>
+    <td><input type="password" name="textfield10" required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>
+      
+        <div align="right">
+          <input type="submit" name="Submit" value="register" class="btn btn-success"/>
+        </div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    </div>
+</form>
+</body>
+{% endblock %}

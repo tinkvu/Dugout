@@ -1,0 +1,25 @@
+{% extends 'View Rate Info.html' %}
+{% block body %}
+<body>
+<center>
+<form action="/AddRateInfo1" method="post">
+ <table width="405" border="1" class="table">
+  <tr>
+     <td width="166">Type </td>
+    <td width="166">Day Time Rate </td>
+    <td width="229">Night Time Rate </td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td> {{i[0]}}</td>
+    <td> <input type="text" name="d{{i[0]}}" value="{{i[1]}}"/></td>
+    <td><input type="text" name="n{{i[0]}}" value="{{i[2]}}"/></td>
+  </tr>
+  {% endfor %}
+   <tr>
+     <td colspan="3" align="center"><input type="submit" value="Save"></td>
+   </tr>
+</table>
+</form></center>
+</body>
+{% endblock %}

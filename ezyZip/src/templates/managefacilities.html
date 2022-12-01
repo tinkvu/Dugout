@@ -1,0 +1,26 @@
+{% extends 'turf_index.html' %}
+{% block body %}
+
+<body>
+<form action="" method="get" >
+<table border="1" class="table">
+  <tr>
+    <td width="144">Facility</td>
+    <!--<td width="144">Description</td>-->
+    <td width="186"><p>&nbsp;</p>      </td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>{{i[2]}}</td>
+    <!--<td>&nbsp;{{i[]}}</td>-->
+    <td width="186"><p><a href="/EditFacility?id={{i[0]}}" class="btn btn-info">Edit</a> / <a href="/DeleteFacility?id={{i[0]}}"  class="btn btn-danger">Delete</a> </p>
+      </td>
+  </tr>
+  {% endfor %}
+  <a href="AddNewFac" class="btn btn-success">Add New</a>
+</table>
+<!--<p class="btn btn-success"></p>-->
+<!--&nbsp;</p>-->
+</form>
+</body>
+{% endblock %}

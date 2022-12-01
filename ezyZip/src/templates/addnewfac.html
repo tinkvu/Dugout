@@ -1,0 +1,48 @@
+{% extends 'turf_index.html' %}
+{% block body %}
+
+<body>
+<h1> Facility </h1>
+<form id="form1" name="form1" method="post" action="/AddNewFac1">
+ <table border="0" class="table" style="width:800px;">
+     <tr>
+         <td> <input type="checkbox" value="locker" {% if 'locker' in v %} checked {% endif %} name="facility"> Locker</td>
+          <td> <input type="checkbox" value="washroom" {% if 'washroom' in v %} checked {% endif %} name="facility"> Wash Room</td>
+          <td> <input type="checkbox" value="water" {% if 'water' in v %} checked {% endif %} name="facility"> Drinking Water</td>
+
+     </tr>
+     <tr>
+          <td> <input type="checkbox" value="parking"{% if 'parking' in v %} checked {% endif %}  name="facility"> Parking</td>
+         <td> <input type="checkbox" value="prayer_room" {% if 'prayer_room' in v %} checked {% endif %} name="facility"> Prayer Room</td>
+         <td> <input type="checkbox" value="gallery"  {% if 'gallery' in v %} checked {% endif %}name="facility"> Gallery</td>
+
+     </tr>
+     <tr>
+          <td> <input type="checkbox" value="cafeteria" {% if 'cafeteria' in v %} checked {% endif %} name="facility"> Cafeteria</td>
+         <td> <input type="checkbox" value="dressing_room" {% if 'dressing_room' in v %} checked {% endif %}name="facility"> Dressing Room</td>
+         <td> <input type="checkbox" value="security_camera" {% if 'security_camera' in v %} checked {% endif %} name="facility"> Security Cameras</td>
+
+     </tr>
+     <tr>
+          <td> <input type="checkbox" value="first_aid" {% if 'first_aid' in v %} checked {% endif %} name="facility"> First Aid Kit</td>
+         <td> <input type="checkbox" value="shower" {% if 'shower' in v %} checked {% endif %} name="facility"> Pool/ Shower</td>
+         <td> <input type="checkbox" value="gym" {% if 'gym' in v %} checked {% endif %} name="facility"> Gym / Fitness Centre</td>
+
+     </tr>
+  <!--<tr>-->
+    <!--<td>Facility</td>-->
+    <!--<td><input name="facility" type="text" class="form-control"/></td>-->
+  <!--</tr>-->
+  <!--<tr>-->
+    <!--<td>Description</td>-->
+      <!--<td><textarea name="description" type="text" required class="form-control"/></textarea></td>-->
+  <!--</tr>-->
+</table>
+
+
+ <p>
+   <input type="submit" name="Submit" value="Add" class="btn btn-success"/>
+ </p>
+</form>
+</body>
+{% endblock %}

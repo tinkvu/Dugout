@@ -1,0 +1,25 @@
+{% extends 'managefacilities.html' %}
+{% block body %}
+
+<body>
+<h2> Edit Facility </h2>
+<form id="form1" name="form1" method="post" action="/EditNewFac1">
+ <table border="0" class="table">
+  <tr>
+    <td>Facility</td>
+    <td><input name="facility" type="text" value="{{i[2]}}" class="form-control" required/>
+        <input name="id" type="hidden" value="{{i[0]}}" /></td>
+  </tr>
+  <!--<tr>-->
+    <!--<td>Description</td>-->
+    <!--<td><input name="description" type="text" value="{{i[3]}}" class="form-control" required/></td>-->
+  <!--</tr>-->
+</table>
+
+
+ <p>
+   <input type="submit" name="Submit" value="Edit" class="btn btn-success" />
+ </p>
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<body>
+<h1> Turf </h1>
+<center>
+<form action="/viewfeatures1" method="post">
+  <table width="200" border="1" class="table" style="width:600px;">
+  <tr>
+    <td >Turf</td>
+    <td colspan="6"><select name="select" class="form-control">
+      <option value="">Select</option>
+      {% for i in data1 %}
+      <option value="{{i[8]}}" {% if s == i[8]|string %} selected {% endif %}> {{i[1]}} {{i[2]}} </option>
+      {% endfor %}
+    </select>
+      <input type="submit" name="Submit" value="search" class="btn btn-info"/></td>
+  </tr>
+
+
+
+</table><br>
+
+  {% if data|length == 0 %}
+  <h1> No features added </h1>
+  {% else %}
+  <table  class="table" width="600px">
+    <tr>
+    {% for i in range(0,data|length) %}
+{% if i != 0 %}
+        {% if i%3 == 0 %}
+
+          </tr>
+          <tr>
+        {% endif %}
+    {% endif %}
+      <td >{{data[i]}} </td>
+
+    {% endfor %}
+  </table>
+  {% endif %}
+</form>
+  </center>
+</body>
+{% endblock %}

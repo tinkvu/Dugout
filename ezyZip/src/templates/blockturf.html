@@ -1,0 +1,33 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<body>
+<h1> Block Turfs here!</h1>
+<div id="dd" class="dd">
+<a href="unblockturfs" class="btn btn-blank"> Blocked Turfs</a>
+<form id="form1" name="form1" method="post" action="">
+   <table width="200" border="1" class="table"   id="customers">
+    <tr>
+     <th>Turf Name</th>
+    <th>Place</th>
+    <th>Post</th>
+    <th>Pincode</th>
+    <th>Contact No.</th>
+
+    </tr>
+    {% for i in data3 %}
+    <tr>
+      <td>&nbsp;{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+	  <td><p><a href="blockt?id={{i[8]}}" class="btn btn-danger" >block</a></p>
+     <!-- <p><a href="#">unblock</a></p></td> -->
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+  </div>
+</body>
+{% endblock %}

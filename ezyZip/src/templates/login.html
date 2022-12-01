@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block body %}
+<body>
+<br><br><br>
+<form action="/login" method="post" >
+<table  width="200" border="0" class="table" style="width:500px;">
+  <tr >
+    <td>Username</td>
+    <td><input type="text" name="uname" class="form-control" placeholder="Your email is your Username!" required/></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" name="password" class="form-control" placeholder="Password" /></td>
+  </tr>
+    <tr>
+
+    <td colspan="2" align="center"><input type="submit" name="Login" value="login" class="btn btn-success"/></td>
+  </tr>
+  <tr>
+  <td> Haven't registered yet? <a href="/townerregistration"> Partner with us! </a> </td></tr>
+</table>
+
+
+</form>
+</body>
+{% endblock %}

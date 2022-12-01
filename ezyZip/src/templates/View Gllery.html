@@ -1,0 +1,22 @@
+{% extends 'turf_index.html' %}
+{% block body %}
+<body>
+<form action="/AddGllery" method="post">
+  <table width="200" border="1" class="table" style="width:60%;">
+  <tr>
+    <td>Gallery</td>
+    <td>&nbsp;</td>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td><a href="../static/fimg/{{i[2]}}"> <img src="../static/fimg/{{i[2]}}" width="100" height="100"/></a> </td>
+    <td class="btn btn-danger"><a href="RemoveGI?id={{i[0]}}">Remove</a></td>
+  </tr>
+  {% endfor %}
+</table>
+  <div align="left">
+    <input type="submit" name="Submit"  value="Add More" class="btn btn-success" />
+  </div>
+</form>
+</body>
+{% endblock %}

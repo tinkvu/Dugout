@@ -1,0 +1,21 @@
+{% extends 'blockturf.html' %}
+{% block body %}
+<body>
+<form action="" method="get">
+<table width="200" border="1" class="table">
+  <tr>
+    <th scope="col">Turf Name </th>
+    <th scope="col">Turf ID </th>
+    <th scope="col">Unblock</th>
+  </tr>
+  {% for i in data4 %}
+  <tr>
+    <th scope="row">{{i[1]}}</th>
+    <td>{{i[0]}}</td>
+    <td><a href="unblockt?id={{i[8]}}" class="btn btn-success"> Unblock </a></td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}
